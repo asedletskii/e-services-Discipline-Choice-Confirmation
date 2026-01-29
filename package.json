@@ -1,0 +1,101 @@
+{
+  "name": "e-services",
+  "version": "1.52.1",
+  "private": true,
+  "scripts": {
+    "start": "rsbuild dev -o",
+    "build": "yarn convert_dictionary && rsbuild build",
+    "build:patched": "yarn convert_dictionary && git add . && yarn version patch && rsbuild build",
+    "preview": "rsbuild preview -o",
+    "analyze": "yarn source-map-explorer 'build/static/js/*.js'",
+    "convert_dictionary": "yarn ts-node -r tsconfig-paths/register --transpileOnly --compilerOptions \"{\\\"module\\\":\\\"commonjs\\\"}\" scripts/dictionaryConvert.ts",
+    "check_imports": "node scripts/checkImportCycles.mjs",
+    "postinstall": "patch-package && husky",
+    "husky:pre-commit": "lint-staged --config .config/.lintstagedrc.json --concurrent false",
+    "husky:commit-msg": "commitlint --config .config/git/.commitlintrc.json --edit"
+  },
+  "packageManager": "yarn@4.8.0",
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fingerprintjs/fingerprintjs": "^3.4.2",
+    "@mui/icons-material": "^7.0.1",
+    "@mui/material": "^7.0.1",
+    "@mui/x-data-grid": "6.20.4",
+    "@mui/x-date-pickers": "^7.28.2",
+    "@nstu/e-services-kit": "^1.0.29",
+    "@reduxjs/toolkit": "^2.6.1",
+    "axios": "^1.8.4",
+    "dayjs": "^1.11.13",
+    "formik": "^2.4.6",
+    "formik-mui": "^5.0.0-alpha.1",
+    "formik-mui-lab": "^1.0.0",
+    "html-react-parser": "5.2.3",
+    "i18n-js": "^4.5.1",
+    "localforage": "^1.10.0",
+    "notistack": "^3.0.2",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.1.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^19.1.0",
+    "react-imask": "^7.6.1",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.4.1",
+    "react-window": "^1.8.11",
+    "typescript": "^5.8.2",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.3",
+    "@rsbuild/core": "^1.3.2",
+    "@rsbuild/plugin-eslint": "^1.1.1",
+    "@rsbuild/plugin-react": "^1.1.1",
+    "@rsbuild/plugin-type-check": "^1.2.1",
+    "@types/node": "^20.17.30",
+    "@types/qrcode.react": "^3.0.0",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "@types/react-window": "^1.8.8",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "babel-plugin-import": "^1.13.8",
+    "babel-plugin-transform-imports": "^2.0.0",
+    "commitizen": "^4.3.1",
+    "cz-customizable": "^7.4.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "madge": "^8.0.0",
+    "patch-package": "^8.0.0",
+    "prettier": "^3.5.3",
+    "source-map-explorer": "^2.5.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
+  }
+}

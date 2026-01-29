@@ -1,0 +1,11 @@
+.highlightAnimation {
+  animation: highlightAnimation 3s ease-out 1;
+}
+
+@keyframes highlightAnimation {
+  0%   { box-shadow: inset 0 0 0 2px var(--surface-main); }
+  20%  { box-shadow: inset 0 0 0 2px var(--primary-main); }
+  40%  { box-shadow: inset 0 0 0 2px var(--surface-main); }
+  70%  { box-shadow: inset 0 0 0 2px var(--primary-main); }
+  100% { box-shadow: inset 0 0 0 2px var(--surface-main); }
+}

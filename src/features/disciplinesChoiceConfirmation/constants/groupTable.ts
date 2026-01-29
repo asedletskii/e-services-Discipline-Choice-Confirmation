@@ -1,0 +1,1 @@
+export const columnCoordinates = [0, 60, 260]

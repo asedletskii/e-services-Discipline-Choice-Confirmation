@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@app": ["src/app"],
+
+      "@shared/constants/*": ["src/shared/constants/*"],
+      "@shared/locale": ["src/shared/locale"],
+      "@shared/screens": ["src/shared/screens"],
+      "@shared/api/*": ["src/shared/api/*"],
+      "@shared/api": ["src/shared/api"],
+      "@shared/store/*": ["src/shared/store/*"],
+      "@shared/store": ["src/shared/store"],
+      "@shared/hooks": ["src/shared/hooks"],
+      "@shared/hooks/*": ["src/shared/hooks/*"],
+      "@shared/utils": ["src/shared/utils"],
+      "@shared/utils/*": ["src/shared/utils/*"],
+      "@shared/styles/*": ["src/shared/styles/*"],
+
+      "@features/disciplinesChoiceConfirmation/*": ["src/features/disciplinesChoiceConfirmation/*"]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    // required
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-russian",
+    "stkb.rewrap",
+    // optional
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "funkyremi.vscode-google-translate",
+    "britesnow.vscode-toggle-quotes"
+  ]
+}
