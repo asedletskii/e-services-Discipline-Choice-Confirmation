@@ -83,5 +83,7 @@ yarn start
 ---
 
 ## Контакты
+
 Разработчик: Антон Седлецкий 
+
 Telegram: [@a_sedletskii](https://t.me/a_sedletskii)
